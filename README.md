@@ -58,12 +58,12 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement delete function in Subscriber repository.`
     -   [x] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [x] Commit: `Create Notification service struct skeleton.`
+    -   [x] Commit: `Implement subscribe function in Notification service.`
+    -   [x] Commit: `Implement subscribe function in Notification controller.`
+    -   [x] Commit: `Implement unsubscribe function in Notification service.`
+    -   [x] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -88,5 +88,14 @@ When programming using Rust, we are enforced by rigorous compiler constraints to
 - Dalam pemrograman Rust, penerapan Singleton bertujuan untuk membatasi bahwa sebuah program berjalan pada satu instance. Namun, dalam kasus BambangShop, penerapan DashMap sudah cukup untuk menyimpan subscriber karena memungkinkan akses bersamaan dari beberapa thread secara aman. Namun, jika memang diperlukan, penerapan Singleton bisa menjadi alternatif lain.
 
 #### Reflection Publisher-2
+
+In the Model-View Controller (MVC) compound pattern, there is no “Service” and “Repository”. Model in MVC covers both data storage and business logic. Explain based on your understanding of design principles, why we need to separate “Service” and “Repository” from a Model?
+- Berdasarkan prinsip Single Responsibility Principle, Service dan Repository perlu dipisahkan dari Model karena keduanya memiliki tanggung jawab yang berbeda. Service bertanggung jawab atas business logic aplikasi, sedangkan Repository bertanggung jawab atas penyimpanan data. Memisahkan Service dan Repository akan meningkatkan maintainability proyek dengan memperjelas tanggung jawab masing-masing komponen.
+
+What happens if we only use the Model? Explain your imagination on how the interactions between each model (Program, Subscriber, Notification) affect the code complexity for each model?
+- Jika hanya menggunakan Model, akan terjadi coupling yang tinggi dalam kode, menyebabkan kompleksitas yang meningkat karena Model harus menangani semua aspek, termasuk business logic dan penyimpanan data. Hal ini dapat mengakibatkan kesulitan dalam maintain kode serta pengujian yang sulit dilakukan secara terpisah untuk setiap komponen.
+
+Have you explored more about Postman? Tell us how this tool helps you to test your current work. You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project or any of your future software engineering projects.
+- Postman sangat membantu dalam pengujian karena memungkinkan pengiriman request HTTP ke API yang sedang dikembangkan dan memeriksa response HTTP dengan mudah. Fitur-fitur seperti Collaborative Collections memungkinkan pengelompokan request HTTP dalam satu koleksi, memfasilitasi koordinasi dalam pengembangan dan pengujian API proyek kelompok.
 
 #### Reflection Publisher-3
