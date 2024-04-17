@@ -4,7 +4,7 @@ use rocket::serde::json::Json;
 use bambangshop::Result;
 use crate::model::product::Product;
 use crate::service::product::ProductService;
-
+use crate::service::notification::NotificationService;
 
 #[post("/", data = "<product>")]
 pub fn create(product: Json<Product>) -> Result<Created<Json<Product>>> {
@@ -39,9 +39,9 @@ pub fn delete(id: usize) -> Result<Json<Product>> {
 }
 
 #[post("/<id>/publish")]
-pub fn publish(id:usize)-> Result<Json<Product>>{
-    return match ProductService::publish(id){
-        Ok(f)=> Ok(Json::from(f)),
+pub fn publish(id: usize) -> Result<Json<Product>> {
+    return match ProductService::publish(id) {
+        Ok(f) => Ok(Json::from(f)),
         Err(e) => Err(e)
-    };
+    }
 }
